@@ -1,0 +1,102 @@
+<h2> FORMULARIO DE INSCRIPCIÓN </h2>
+<article>
+    <form>
+        <section class="form1">
+            <label>Nombre/s:</label> <input id="nombre" type="text" name="nombre" value="" placeholder="Nombre" />
+            <label>Apellido:</label> <input id="apellido" type="text" name="apellido" value="" placeholder="Apellido" />
+            <label>Contraseña:</label><input type="password" name="contraseña" value="" placeholder="*****" />
+            <article id="identidad">
+                <label> Sexo:</label><input type="radio" name="sexo" value="masculino" />Masculino
+                <input type="radio" name="sexo" value="femenino" />Femenino
+            </article>
+        </section>
+        <section class="form2">
+            <label>Edad:</label> <input id="edad" type="number" name="edad" value="" />
+            <label>Nro de WhatsApp:</label> <input id="telefono" type="text" name="nrotelefono" value="" />
+            <label>Email:</label> <input id="email" type="email" name="mail" value="" placeholder="ejemplo@gmail.com" />
+        </section>
+        <section class="form3">
+            <label>Título Profesional:</label> <input type="text" name="titulo" value=""
+                placeholder="Título Profesional" />
+            <label>Equipo:</label> <select id="equipo" name="select">
+                <option> </option>
+                <option>Abogados</option>
+                <option>Agrónomos/Veterinarios</option>
+                <option>Arquingenieros</option>
+                <option>Contadores</option>
+                <option>InfoDocentes</option>
+                <option>Profesores de Ed. Física</option>
+                <option>Profesionales de la Salud</option>
+            </select>
+        </section>
+</article>
+<section class="captchas">
+    <input id="captchaOrigen" type="text" name="captchaGenerado" value="" readonly>
+    <button id="recargarCaptcha" type="button" name="resetCaptcha">recargar captcha</button>
+    <input id="captcha" type="text" name="captcha" value="">
+</section>
+<section>
+    <input id="enviarDatos" type="button" value="Enviar datos">
+    <button id="cancelarEdicion">restaurar formulario</button>
+    <input id="cantidadDeCompañeros" type="number" value="1">
+    <input id="necesitoCompañeros" type="button" value="necesito compañero/s">
+    <input id="agregar3Vacios" type="button" value="agregar 3 lugares vacios">
+</section>
+<p id="mensaje"></p>
+<table id="tabla">
+    <thead>
+        <tr>
+            <th>nombre/s</th>
+            <th>apellido</th>
+            <th>edad</th>
+            <th>telefono</th>
+            <th>email</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody id="cuerpoTabla">
+    </tbody>
+    <tfoot>
+        <tr>
+            <td>
+                <label>filtro:</label>
+                <select id="filtroNombre">
+                    <option value=""></option>
+                    <option value="opcionLetras1">menos de 5 letras</option>
+                    <option value="opcionLetras2">más de 5 letras</option>
+                </select>
+            </td>
+            <td>
+                <label>filtro:</label>
+                <select id="filtroApellido">
+                    <option value=""></option>
+                    <option value="opcionLetras1">menos de 5 letras</option>
+                    <option value="opcionLetras2">más de 5 letras</option>
+                </select>
+            </td>
+            <td>
+                <label>filtro:</label>
+                <select id="filtroEdad">
+                    <option value=""></option>
+                    <option value="opcionEdad1">menor a 30</option>
+                    <option value="opcionEdad2">mayor a 30</option>
+                </select>
+            </td>
+            <td></td>
+            <td>
+                <label>filtro:</label>
+                <select id="filtroEmail">
+                    <option value=""></option>
+                    <option value="opcionEmail1">menor a 20</option>
+                    <option value="opcionEmail2">mayor a 20</option>
+                </select>
+            </td>
+        </tr>
+    </tfoot>
+</table>
+<div class="paginado">
+    <button id="anterior">anterior</button>
+    <label class="numeroDePagina">PAGINA: </label><input id="numeroDePagina" type="number" value="" readonly />
+    <button id="siguiente">siguiente</button>
+</div>
